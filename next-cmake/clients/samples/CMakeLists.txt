@@ -85,6 +85,11 @@ add_subdirectory(example_sgemm)
 add_subdirectory(example_sgemm_multiple_strided_batch)
 add_subdirectory(example_sgemm_strided_batched)
 
+# Add Patki DGEMM test
+add_subdirectory(example_dgemm_patki)
+# Add Patki ZGEMM test
+add_subdirectory(example_zgemm_patki)
+
 if(ROCBLAS_ENABLE_FORTRAN)
   # Fortran examples
   add_subdirectory(example_fortran_axpy)

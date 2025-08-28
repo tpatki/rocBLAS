@@ -65,7 +65,13 @@ add_executable( rocblas-example-sgemm example_sgemm.cpp ${rocblas_samples_common
 add_executable( rocblas-example-sgemm-strided-batched example_sgemm_strided_batched.cpp ${rocblas_samples_common} )
 add_executable( rocblas-example-sgemm-multiple-strided-batch example_sgemm_multiple_strided_batch.cpp  ${rocblas_samples_common} )
 
-set( sample_list_L3 rocblas-example-sgemm rocblas-example-sgemm-strided-batched rocblas-example-sgemm-multiple-strided-batch )
+# Add Patki DGEMM example
+add_executable( rocblas-example-dgemm-patki example_dgemm_patki.cpp ${rocblas_samples_common} )
+
+# Add Patki ZGEMM example
+add_executable( rocblas-example-zgemm-patki example_zgemm_patki.cpp ${rocblas_samples_common} )
+
+set( sample_list_L3 rocblas-example-sgemm rocblas-example-sgemm-strided-batched rocblas-example-sgemm-multiple-strided-batch rocblas-example-dgemm-patki rocblas-example-zgemm-patki )
 
 # device includes
 set( sample_list_hip_device ${sample_list_base} ${sample_list_tensile} ${sample_list_L3} )
